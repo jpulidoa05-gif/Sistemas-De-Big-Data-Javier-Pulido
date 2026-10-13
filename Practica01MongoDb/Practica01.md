@@ -106,7 +106,7 @@ db.createCollection("contenidos", {
 
 ### 3.2 Inserción de Datos de Prueba
 Inserción de documentos para poder ejecutar consultas posteriores:
-![Inserción de Datos Iniciales](02-datos.png)
+![Inserción de Datos Iniciales](02-datos.PNG)
 
 ### 3.3 Creación de Índices Justificados
 ```javascript
@@ -119,11 +119,11 @@ db.contenidos.createIndex({ "titulo": "text", "sinopsis": "text" });
 // 3. Índice Compuesto: Optimiza "Seguir Viendo" (Pregunta 5)
 db.interacciones.createIndex({ "perfil_id": 1, "fecha_actualizacion": -1 });
 ```
-![Creación de Índices](03-indices.png)
+![Creación de Índices](03-indices.PNG)
 
 ### 3.4 Explicación del Coste con Explain
 Se ejecuta `explain("executionStats")` en una consulta de filtrado. Se evidencia el paso de escanear todos los documentos (`COLLSCAN`) a usar el árbol B-Tree del índice (`IXSCAN`), reduciendo el número de documentos examinados drásticamente.
-![Explain con IXSCAN](04-explain.png)
+![Explain con IXSCAN](04-explain.PNG)
 
 ---
 
@@ -168,7 +168,7 @@ db.interacciones.aggregate([
   { $limit: 5 }
 ]);
 ```
-![Resultado de Agregación Compleja](05-agregacion.png)
+![Resultado de Agregación Compleja](05-agregacion.PNG)
 ![Gráfica de Visualización](grafica.png)
 
 ---
@@ -180,7 +180,7 @@ Copia de seguridad en caliente exportada al disco local mediante las *Database T
 ```bash
 mongodump --uri="mongodb+srv://<usuario>:<password>@cluster0.xxxx.mongodb.net/streaming_db" --out ./backup_practica
 ```
-![Evidencia de Backup](06-backup.png)
+![Evidencia de Backup](06-backup.PNG)
 *Para restaurar, se emplearía `mongorestore` apuntando al directorio generado.*
 
 ### 5.2 Usuarios, Roles y Permisos
