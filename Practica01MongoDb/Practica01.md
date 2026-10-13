@@ -40,7 +40,7 @@
 ---
 
 ## 2. Diseñar las colecciones
-
+![Gráfica de Visualización](grafica.png)
 
 ### 2.1 Colecciones y su propósito
 1.  **`contenidos`:** Catálogo central.
@@ -169,7 +169,6 @@ db.interacciones.aggregate([
 ]);
 ```
 ![Resultado de Agregación Compleja](05-agregacion.PNG)
-![Gráfica de Visualización](grafica.png)
 
 ---
 
