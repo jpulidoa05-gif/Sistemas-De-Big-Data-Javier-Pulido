@@ -102,7 +102,7 @@ db.createCollection("contenidos", {
   }
 });
 ```
-![Validación $jsonSchema](01-validacion.png)
+![Validación $jsonSchema](01-validacion.PNG)
 
 ### 3.2 Inserción de Datos de Prueba
 Inserción de documentos para poder ejecutar consultas posteriores:
